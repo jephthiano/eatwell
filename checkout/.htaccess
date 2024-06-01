@@ -1,0 +1,24 @@
+# FOR URL REWRITING
+# PG
+<IfModule mod_rewrite.c>
+RewriteEngine on
+
+# for payment_method
+RewriteRule ^payment_method/?$ payment_method.enc.php
+
+# for summary
+RewriteRule ^summary/?$ summary.enc.php
+
+# order_status
+RewriteRule ^order_status/?$ order_status.enc.php
+
+# for confirm_payment
+RewriteRule ^confirm_payment/?$ confirm_payment.enc.php
+
+# for initialize_payment
+RewriteRule ^initialize_payment/?$ initialize_payment.enc.php
+
+# for index
+RewriteRule ^[\w]/?$ index.php
+
+</IfModule>

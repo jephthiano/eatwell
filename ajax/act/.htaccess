@@ -1,0 +1,78 @@
+# FOR URL REWRITING
+# PG
+<IfModule mod_rewrite.c>
+RewriteEngine on
+
+# for add to cart
+RewriteRule ^ac/([\d]+)/([\w]+)/?$ add_to_cart.xhr.php?i=$1&t=$2
+
+# for remove from cart
+RewriteRule ^rc/([\d]+)/?$ remove_from_cart.xhr.php?i=$1
+
+# for add and remove wishlist
+RewriteRule ^arw/([\d]+)/?$ add_remove_from_wishlist.xhr.php?i=$1
+
+# for process_contact_details_delivery_method
+RewriteRule ^pcddm/?$ process_contact_details_delivery_method.xhr.php
+
+# for process_payment_method
+RewriteRule ^ppm/?$ process_payment_method.xhr.php
+
+# for process_order_summary
+RewriteRule ^pos/?$ process_order_summary.xhr.php
+
+# for insert message
+RewriteRule ^im/?$ insert_message.xhr.php
+
+# for login
+RewriteRule ^l/?$ login.xhr.php
+
+# for sign up
+RewriteRule ^sp/?$ sign_up.xhr.php
+
+# for process_forgot_password_email
+RewriteRule ^pfpe/?$ process_forgot_password_email.xhr.php
+
+# for process_forgot_password_code
+RewriteRule ^pfpc/?$ process_forgot_password_code.xhr.php
+
+# for process_forgot_password_password
+RewriteRule ^pfpp/?$ process_forgot_password_password.xhr.php
+
+# for logout
+RewriteRule ^lg/?$ logout.xhr.php
+
+# for delete account
+RewriteRule ^da/?$ delete_account.xhr.php
+
+# for update profile
+RewriteRule ^up/?$ update_profile.xhr.php
+
+# for change_password
+RewriteRule ^cp/?$ change_password.xhr.php
+
+# for add_new_contact
+RewriteRule ^anc/?$ add_new_contact.xhr.php
+
+# for update_contact
+RewriteRule ^uc/?$ update_contact.xhr.php
+
+# for delete_user_contact
+RewriteRule ^duc/?$ delete_user_contact.xhr.php
+
+# for set_contact_as_default
+RewriteRule ^scad/?$ set_contact_as_default.xhr.php
+
+# for change_order_status
+RewriteRule ^cos/?$ change_order_status.xhr.php
+
+# for insert_review
+RewriteRule ^ir/?$ insert_review.xhr.php
+
+# for set delivery fee and method
+RewriteRule ^sdfm/([\w\s]+)/?$ set_delivery_fee_and_method.xhr.php?t=$1
+
+# for set payment method
+RewriteRule ^spm/([\w\s]+)/?$ set_payment_method.xhr.php?t=$1
+
+</IfModule>

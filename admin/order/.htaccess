@@ -1,0 +1,31 @@
+#To prevent order from seeing directory, add this to htacess in the home directory of a website
+Options -Indexes
+
+# To disable directory browsing
+Options All -Indexes
+
+#To prevent folder listing
+IndexIgnore *
+
+#FOR ERROR REPORTING
+#php_flag display_errors off
+
+
+# FOR URL REWRITING
+<IfModule mod_rewrite.c>
+RewriteEngine on
+
+# for preview_order
+RewriteRule ^preview_order/([\d]+)/?$ preview_order.enc.php?page=$1
+
+# for preview_orders
+RewriteRule ^preview_orders/([\d]+)/?$ preview_orders.enc.php?page=$1
+
+# for user_all_orders
+RewriteRule ^user_all_orders/([\d]+)/([\w\s-]*)/?$ user_all_orders.enc.php?id=$1&type=$2&page=$2
+
+# for index
+RewriteRule ^([\w\s\-]*)/([\w]*)/?$ index.php?status=$1&page=$2
+</IfModule>
+
+

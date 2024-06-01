@@ -1,0 +1,41 @@
+# FOR URL REWRITING
+# PG
+<IfModule mod_rewrite.c>
+RewriteEngine on
+
+# for notification counter
+RewriteRule ^gnc/([\w]+)/?$ get_notification_counter.xhr.php?t=$1
+
+# for get total col
+RewriteRule ^gtc/([\w\s]+)/?$ get_total_col.xhr.php?t=$1
+
+# for get flash sales
+RewriteRule ^gfs/?$ get_flash_sales.xhr.php
+
+# for get new arrival
+RewriteRule ^gna/?$ get_new_arrival.xhr.php
+
+# for get top deal
+RewriteRule ^gtd/?$ get_top_deals.xhr.php
+
+# for get top category
+RewriteRule ^gtc/?$ get_top_category.xhr.php
+
+# for get recommended
+RewriteRule ^gr/([\w\s]+)/([\w\s]+)/?$ get_recommended.xhr.php?i=$1&p=$2
+
+# for get recently_viewed
+RewriteRule ^grv/?$ get_recently_viewed.xhr.php
+
+# for get wishlist
+RewriteRule ^gw/?$ get_wishlist.xhr.php
+
+# for get food_page_data
+RewriteRule ^gfpd/([\w\s\&]+)/?$ get_food_page_data.xhr.php?p=$1
+
+# for get_cart
+RewriteRule ^gc/?$ get_cart.xhr.php
+
+# for get_add_cart_button
+RewriteRule ^gacb/([\d]+)/([\w]+)/?$ get_add_cart_button.xhr.php?i=$1&p=$2
+</IfModule>

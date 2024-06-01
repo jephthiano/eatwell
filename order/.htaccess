@@ -1,0 +1,15 @@
+# FOR URL REWRITING
+# PG
+<IfModule mod_rewrite.c>
+RewriteEngine on
+
+# for order_details
+RewriteRule ^order_details/([\d]*)/?$ order_details.enc.php?val=$1
+
+# for track
+RewriteRule ^track/([\d]*)/?$ track.enc.php?val=$1
+
+# for index
+RewriteRule ^([\w\s-]*)/([\d]*)/?$ index.php?type=$1&page=$2
+
+</IfModule>

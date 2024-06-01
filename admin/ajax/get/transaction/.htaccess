@@ -1,0 +1,18 @@
+# FOR URL REWRITING
+# PG
+<IfModule mod_rewrite.c>
+RewriteEngine on
+
+# for get transaction result
+RewriteRule ^gtr/?$ get_transaction_result.xhr.php
+
+# for get annual transaction result
+RewriteRule ^gatr/?$ get_annual_transaction_result.xhr.php
+
+# for get monthly transaction result
+RewriteRule ^gmtr/?$ get_monthly_transaction_result.xhr.php
+
+# for get daily transaction result
+RewriteRule ^gdtr/?$ get_daily_transaction_result.xhr.php
+
+</IfModule>

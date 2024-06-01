@@ -1,0 +1,11 @@
+# FOR URL REWRITING
+<IfModule mod_rewrite.c>
+RewriteEngine on
+
+# for message
+RewriteRule ^message/([\d]+)/?$ message.enc.php?val=$1
+
+# for index
+RewriteRule ^([\d]*)/?$ index.php?page=$1
+
+</IfModule>

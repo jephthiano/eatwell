@@ -1,0 +1,19 @@
+# FOR URL REWRITING
+<IfModule mod_rewrite.c>
+RewriteEngine on
+
+
+# for insert category
+RewriteRule ^insert_category/?$ insert_category.enc.php
+
+# for preview_category
+RewriteRule ^preview_category/([\d]+)/?$ preview_category.enc.php?page=$1
+
+# for edit_category
+RewriteRule ^update_category/([\d]+)/?$ update_category.enc.php?page=$1
+
+# for index
+RewriteRule ^([\w]*)/?$ index.php?page=$1
+</IfModule>
+
+

@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
+	<url>
+		<loc>https://eatwellre.000webhostapp.com</loc>
+		<changefreq>always</changefreq>
+	</url>
+	<url>
+		<loc>https://eatwellre.000webhostapp.com/search/</loc>
+		<changefreq>always</changefreq>
+	</url>
+	<url>
+		<loc>https://eatwellre.000webhostapp.com/misc/about_us/</loc>
+		<changefreq>always</changefreq>
+	</url>
+	<url>
+		<loc>https://eatwellre.000webhostapp.com/misc/contact_us/</loc>
+		<changefreq>always</changefreq>
+	</url>
+	<url>
+		<loc>https://eatwellre.000webhostapp.com/misc/privacy_policy/</loc>
+		<changefreq>always</changefreq>
+	</url>
+	<url>
+		<loc>https://eatwellre.000webhostapp.com/misc/terms_of_use/</loc>
+		<changefreq>always</changefreq>
+	</url>
+	<url>
+		<loc>https://eatwellre.000webhostapp.com/misc/faq/</loc>
+		<changefreq>always</changefreq>
+	</url>
+</urlset>

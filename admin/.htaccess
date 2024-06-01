@@ -1,0 +1,13 @@
+# FOR URL REWRITING
+<IfModule mod_rewrite.c>
+RewriteEngine on
+
+# for index
+RewriteRule ^index/?$ index.php
+
+# for login
+RewriteRule ^login/?$ login.enc.php
+
+</IfModule>
+
+

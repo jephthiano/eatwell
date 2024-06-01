@@ -1,0 +1,28 @@
+#To prevent user from seeing directory, add this to htacess in the home directory of a website
+Options -Indexes
+
+# To disable directory browsing
+Options All -Indexes
+
+#To prevent folder listing
+IndexIgnore *
+
+#FOR ERROR REPORTING
+#php_flag display_errors off
+
+# FOR URL REWRITING
+<IfModule mod_rewrite.c>
+RewriteEngine on
+
+# for settings
+RewriteRule ^run_action/?$ run_action.enc.php
+
+# for site details
+RewriteRule ^site_data/?$ site_data.enc.php
+
+# for settings
+RewriteRule ^settings/?$ settings.enc.php
+
+</IfModule>
+
+

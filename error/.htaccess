@@ -1,0 +1,13 @@
+# FOR URL REWRITING
+<IfModule mod_rewrite.c>
+RewriteEngine on
+
+# for timeout
+RewriteRule ^tm/?$ timeout.php
+
+# for no surfing
+RewriteRule ^no_surfing/?$ no_surfing.enc.php
+
+# for index
+RewriteRule ^([\w]*)/?$ index.php
+</IfModule>

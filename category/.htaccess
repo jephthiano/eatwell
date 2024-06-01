@@ -1,0 +1,11 @@
+# FOR URL REWRITING
+<IfModule mod_rewrite.c>
+RewriteEngine on
+
+# food
+RewriteRule ^food/([\w\+\s\-\&\,\;\'\:]*)/([\d]*)/?$ food.enc.php?val=$1&page=$2
+
+# for index
+RewriteRule ^([\d]*)/?$ index.php?page=$1
+
+</IfModule>

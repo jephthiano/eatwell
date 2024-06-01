@@ -1,0 +1,119 @@
+#To prevent user from seeing directory, add this to htacess in the home directory of a website
+Options -Indexes
+
+# To disable directory browsing
+Options All -Indexes
+
+#To prevent folder listing
+IndexIgnore *
+
+#dont show data.xml
+<FilesMatch "^data.xml$">
+Order Allow,Deny
+Deny from all
+</FilesMatch>
+
+#dont show settings.json
+<FilesMatch "^settings.json$">
+Order Allow,Deny
+Deny from all
+</FilesMatch>
+
+#FOR ERROR REPORTING
+#php_flag display_errors off
+
+#CLIENT REQUEST ERROR
+#bad request
+ErrorDocument 400 /error/
+
+#authentication required
+ErrorDocument 401 /error/
+
+#payment required
+ErrorDocument 402 /error/
+
+#forbidden
+ErrorDocument 403 /error/
+
+#file not found
+ErrorDocument 404 /error/
+
+#method not allowed
+ErrorDocument 405 /error/
+
+#not acceptable (encoding)
+ErrorDocument 406 /error/
+
+#proxy authentication required
+ErrorDocument 407 /error/
+
+#Request time out
+ErrorDocument 408 /error/tm
+
+#Conflictin request
+ErrorDocument 409 /error/
+
+#Gone
+ErrorDocument 410 /error/
+
+#content-length required
+ErrorDocument 411 /error/
+
+#precondition failed
+ErrorDocument 412 /error/
+
+#request entity  too long
+ErrorDocument 413 /error/
+
+#request URL too long
+ErrorDocument 414 /error/
+
+#unsupported media type
+ErrorDocument 415 /error/
+
+
+#SERVER ERROR
+#internal server /error
+ErrorDocument 500 /error/
+
+#not implemented
+ErrorDocument 501 /error/
+
+#bad gateway
+ErrorDocument 502 /error/
+
+#service unavailable
+ErrorDocument 503 /error/
+
+#gateway timeout
+ErrorDocument 504 /error/
+
+#http version not supported
+ErrorDocument 505 /error/
+
+# FOR URL REWRITING
+<IfModule mod_rewrite.c>
+RewriteEngine on
+
+# FOR SSL REDIRECTION
+# RewriteCond %{HTTPS} off
+# RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URL} [L,R=301]
+
+# for login
+RewriteRule ^login/?$ login.enc.php
+
+# for signup
+RewriteRule ^signup/?$ signup.enc.php
+
+# for forgot_password
+RewriteRule ^forgot_password/([\w-]*)/?$ forgot_password.enc.php?page=$1
+
+# for cart
+RewriteRule ^cart/?$ cart.enc.php
+
+# for search
+RewriteRule ^search/([\w\+\s\-\&\,\;\'\:]*)/([\d]*)/?$ search.enc.php?sear=$1&page=$2
+
+# for index
+RewriteRule ^([\w\+\s\-\&\,\;\'\:]*)/?$ index.php?type=$1
+</IfModule>

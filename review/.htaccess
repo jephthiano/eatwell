@@ -1,0 +1,15 @@
+# FOR URL REWRITING
+# PG
+<IfModule mod_rewrite.c>
+RewriteEngine on
+
+# for add_review
+RewriteRule ^add_review/([\d]+)/?$ add_review.enc.php?val=$1
+
+# for product_review
+RewriteRule ^product_review/([\d]+)/([\w-]*)/([\d]*)/?$ product_review.enc.php?val=$1&level=$2&page=$3
+
+# for index
+RewriteRule ^([\d]*)/?$ index.php?page=$1
+
+</IfModule>

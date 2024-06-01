@@ -1,0 +1,23 @@
+# FOR URL REWRITING
+# PG
+<IfModule mod_rewrite.c>
+RewriteEngine on
+
+# for edit_profile
+RewriteRule ^edit_profile/?$ edit_profile.enc.php
+
+# for change_password
+RewriteRule ^change_password/?$ change_password.enc.php
+
+# for contact
+RewriteRule ^contact/?$ contact.enc.php
+
+# for wishlist
+RewriteRule ^wishlist/([\d]*)/?$ wishlist.enc.php?page=$1
+
+# for viewed
+RewriteRule ^viewed/([\d]*)/?$ viewed.enc.php?page=$1
+
+# for index
+RewriteRule ^[\w]/?$ index.php
+</IfModule>

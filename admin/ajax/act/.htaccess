@@ -1,0 +1,74 @@
+# FOR URL REWRITING
+# PG
+<IfModule mod_rewrite.c>
+RewriteEngine on
+
+# for login
+RewriteRule ^l/?$ login.xhr.php
+
+# for logout
+RewriteRule ^lg/?$ logout.xhr.php
+
+# for insert admin
+RewriteRule ^ia/?$ insert_admin.xhr.php
+
+# for insert admin
+RewriteRule ^da/?$ delete_account.xhr.php
+
+# for edit profile
+RewriteRule ^up/?$ update_profile.xhr.php
+
+# for change password
+RewriteRule ^cp/?$ change_password.xhr.php
+
+# for insert social handle
+RewriteRule ^ish/?$ insert_social_handle.xhr.php
+
+# for update social hpndle
+RewriteRule ^ush/?$ update_social_handle.xhr.php
+
+# for insert category
+RewriteRule ^ic/?$ insert_category.xhr.php
+
+# for update category
+RewriteRule ^uc/?$ update_category.xhr.php
+
+# for insert food
+RewriteRule ^if/?$ insert_food.xhr.php
+
+# for update food
+RewriteRule ^uf/?$ update_food.xhr.php
+
+# for delete content
+RewriteRule ^dc/([\w]+)/([\d]+)/?$ delete_content.xhr.php?t=$1&i=$2
+
+# for change status
+RewriteRule ^cs/([\w]+)/([\d]+)/([\w]+)/?$ change_status.xhr.php?t=$1&i=$2&s=$3
+
+# for refund customer
+RewriteRule ^rc/?$ refund_customer.xhr.php
+
+# for update level
+RewriteRule ^ul/([\d]+)/([\d]+)/?$ update_level.xhr.php?l=$1&i=$2
+
+# for change image
+RewriteRule ^ci/?$ change_image.xhr.php
+
+# for remove image
+RewriteRule ^ri/([\w]+)/([\d]+)/?$ remove_image.xhr.php?t=$1&i=$2
+
+# for change site settings
+RewriteRule ^css/?$ change_site_setting.xhr.php
+
+# for change_order_status
+RewriteRule ^cos/?$ change_order_status.xhr.php
+
+# for send email
+RewriteRule ^se/?$ send_email.xhr.php
+
+# for clear log
+RewriteRule ^cl/?$ clear_log.xhr.php
+
+# for run action
+RewriteRule ^ra/?$ run_action.xhr.php
+</IfModule>
